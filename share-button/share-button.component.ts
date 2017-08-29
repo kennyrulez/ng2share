@@ -8,7 +8,7 @@ import { Properties } from '../properties.utils'
               <div  (click)="click($event)"
                 class="nxs-share-btn nxs-share-btn-{{platform.name}} nxs-{{direction}}-margin
                   {{textEnabled ? 'nxs-share-btn-with-text' : '' }}">
-                <i class="ic fa fa-{{platform.logoOfficial}}"></i>
+                <i class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><svg:path fill="white" [attr.d]="platform.icon" /></svg></i>
                 <span class="nxs-shareText" *ngIf="textEnabled">
                   <span class="nxs-shareText-primary">{{platform.text}} </span>
                   <span class="nxs-shareText-secondary">{{addedText}}</span>

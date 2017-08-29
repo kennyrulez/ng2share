@@ -1,6 +1,6 @@
 {
-  "name": "ng2share",
-  "version": "1.4.0",
+  "name": "ngxshare",
+  "version": "1.5.3",
   "description": "angular 2+ social media sharing buttons",
   "main": "share.module.ts",
   "scripts": {

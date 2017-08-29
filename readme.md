@@ -1,16 +1,15 @@
-# ngxshare Expandable Share buttons for angular 2+ !
+# ngxshare Share buttons for angular 2+ !
 
-![ng2share preview](http://i.imgur.com/L9EbBaa.png)
+![ngxshare preview](http://i.imgur.com/L9EbBaa.png)
 
-A module to easily implement share button within an angular 2 app. The buttons are expandable, and highly costumizable. [Live demo](https://cedvdb.github.io/ng2share/).
+A module to easily implement share button within an angular 2 app. The buttons are highly costumizable. [Live demo](https://kennyrulez.github.io/ngxshare/).
 
-###Note
+##Note
 
 Inspired from [ng2-sharebuttons by MurhafSousli](https://github.com/MurhafSousli/ng2-sharebuttons), if you don't know it already,
 go check it out.
 
 Also visually inspired from the share buttons at http://mashable.com
-
 
 
 ## Table of Contents
@@ -30,26 +29,16 @@ Also visually inspired from the share buttons at http://mashable.com
 
 ## Installation
 
-This widget requires font awesome so 
+Install with npm
 
 ```
-      npm install ng2share --save
+      npm install ngxshare --save
 ```
 
-Add the icons to your angular-cli.json :
+Import it in your module.
 
 ```
-      "styles": [
-        "styles.css",
-        "../node_modules/font-awesome/css/font-awesome.css" 
-      ],
-```
-
-
- Then import it in your module.
-
-```
-import {ShareModule} from 'ng2share/share.module'
+import {ShareModule} from 'ngxshare/share.module'
 
  @NgModule({
    imports: [..., ShareModule ],
@@ -64,14 +53,13 @@ You then can use the share container in your app
     <share-container
                         direction="horizontal"
                         addedText="your creation"
-                        [expandable]="true"
                         [textEnabled]="true"
                         [platforms]="['reddit','twitter','facebook','mail']">
     </share-container>
 
 ```
 
- By default, ng2share takes the url and the title of your website to pass it in the parameters of the share url.
+ By default, ngxshare takes the url and the title of your website to pass it in the parameters of the share url.
 
  However, it's good practice to use the meta tags if you intend your website to be shared, so you shouldn't rely on the default behavior.
 
@@ -85,7 +73,7 @@ You then can use the share container in your app
   <meta property="nxs:via" content="Google" />
   <meta property="nxs:hashtags" content="Google"/>
  ```
- As you can see there is two additional tags that ng2share uses internally: *nxs:via* and *nxs:hashtags*. Those tags are used for twitter,
+ As you can see there is two additional tags that ngxshare uses internally: *nxs:via* and *nxs:hashtags*. Those tags are used for twitter,
  thus if you don't need twitter as a sharing platform there is no need to put those. Actually none of the tags are mendatory, but it is advised
  nonetheless to be quite exhaustive.
 
@@ -99,25 +87,20 @@ You then can use the share container in your app
 
 There is quite a few options however, so we are gonna see that next
 
+
 ## Options
 
 ```
 	<share-container
 						direction="horizontal"
 						addedText="your creation"
-						[expandable]="true"
 						[textEnabled]="true"
 						[platforms]="['reddit','twitter','facebook','mail']">
 	</share-container>
 ```
 
 **platforms**: Array of string of platform's name that are displayed in the primary panel. Can be anything in : ['reddit','twitter','facebook','googlePlus','stumbleUpon','tumblr','linkedin','pinterest','mail']
-Default is ['twitter', 'facebook'].
-
-**secondaryPlatforms**: Array of string of platform's name that are displayed in the secondary panel (the expanding div). Can be anything in : ['reddit','twitter','facebook','googlePlus','stumbleUpon','tumblr','linkedin','pinterest','mail']
-Default is ['googlePlus','reddit','pinterest', 'linkedin']
-
-**expandable**: true (default) / false; Specify if the component is expandable (whether the secondary panel is present or not).
+Default is ['reddit','twitter','facebook','googlePlus','stumbleUpon','tumblr','linkedin','pinterest','mail'].
 
 **direction**: horizontal (default) / vertical; You might want to put your share buttons on the top of an article or you might want to put it on the right.
 In which case having the share buttons being displayed vertically is useful. That's what this option is for.
@@ -132,13 +115,13 @@ In which case having the share buttons being displayed vertically is useful. Tha
 ## Costumization
 
 If you want to costumize the share buttons on a global scope, on the whole website, you can directly change the css source code in the css. There is two files.
-*share-button.component.css* which is the css for individual buttons, and *share-container.component.css* which is the css for the container ( and the + expandable button).
+*share-button.component.css* which is the css for individual buttons, and *share-container.component.css* which is the css for the container.
 
 
 ## Multiple shared content by url
 
 If however you have multiple share buttons on your website and want multiple different styles, you can just override the css properties with !important.
-That is what is done on the demo website, see costumizable section at https://cedvdb.github.io/ng2share/
+That is what is done on the demo website, see costumizable section at https://kennyrulez.github.io/ngxshare/
 
 The code in the source code is actually :
 
@@ -159,7 +142,7 @@ The code in the source code is actually :
 
  To give a grey background and a red color on hover:
 
- ![ng2share custom](http://i.imgur.com/QDRIyxi.png)
+ ![ngxshare custom](http://i.imgur.com/QDRIyxi.png)
 
 
  Remember that !important is used here because there is multiple different styles on the page, so there is a need to overwrite the default style in some places.
@@ -179,6 +162,6 @@ The code in the source code is actually :
 
 ## Thanks for your feedback
 
-Your feedback is very much appreciated as it will be used to improve ng2share. Feel free to post issues, request for new features or if you want to participate you are welcome to.
+Your feedback is very much appreciated as it will be used to improve ngxshare. Feel free to post issues, request for new features or if you want to participate you are welcome to.
 
-You might be interested in following me on twitter as well https://twitter.com/Ced_VDB
+You might be interested in following the original creator of this component I forked on twitter as well https://twitter.com/Ced_VDB

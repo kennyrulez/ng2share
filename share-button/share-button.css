@@ -3,16 +3,20 @@ a {
 }
 
 .ic {
-  font-size: 1.2rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
 }
 
 .nxs-share-btn {
   height: 32px;
   width: 32px;
-  font-size: 24px;
+  font-weight: bold;
   cursor: pointer;
   color: #eee;
-  border-radius: 2px;
+  border-radius: 5px;
   /*center icons*/
   display: flex;
   justify-content: center;
@@ -35,7 +39,7 @@ a {
 }
 
 .nxs-share-btn-with-text {
-  padding: 0 10px 0 5px;
+  padding: 1em;
   width: auto;
 }
 
@@ -45,8 +49,6 @@ a {
 
 .nxs-shareText {
   margin-left: 5px;
-  font-size: 14px;
-  font-family: helvetica;
 }
 
 .nxs-share-btn-facebook {
