@@ -1,4 +1,4 @@
-# ng2share Expandable Share buttons for angular 2 !
+# ngxshare Expandable Share buttons for angular 2+ !
 
 ![ng2share preview](http://i.imgur.com/L9EbBaa.png)
 
@@ -82,10 +82,10 @@ You then can use the share container in your app
   <meta property="og:title" content="google" />
   <meta property="og:description" content="A site to make researches" />
   <meta property="og:image" content="google.png" />
-  <meta property="n2s:via" content="Google" />
-  <meta property="n2s:hashtags" content="Google"/>
+  <meta property="nxs:via" content="Google" />
+  <meta property="nxs:hashtags" content="Google"/>
  ```
- As you can see there is two additional tags that ng2share uses internally: *n2s:via* and *n2s:hashtags*. Those tags are used for twitter,
+ As you can see there is two additional tags that ng2share uses internally: *nxs:via* and *nxs:hashtags*. Those tags are used for twitter,
  thus if you don't need twitter as a sharing platform there is no need to put those. Actually none of the tags are mendatory, but it is advised
  nonetheless to be quite exhaustive.
 
@@ -144,11 +144,11 @@ The code in the source code is actually :
 
 
  ```
-	 .customizable .n2s-share-btn{
+	 .customizable .nxs-share-btn{
 	  background: #666!important;
 	  color:white!important;
 	}
-	.customizable .n2s-share-btn:hover{
+	.customizable .nxs-share-btn:hover{
 	  color:#f15c66!important;
 	}
 
