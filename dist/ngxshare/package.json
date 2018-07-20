@@ -1,0 +1,21 @@
+{
+  "name": "ngxshare",
+  "version": "2.0.0",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "main": "bundles/ngxshare.umd.js",
+  "module": "fesm5/ngxshare.js",
+  "es2015": "fesm2015/ngxshare.js",
+  "esm5": "esm5/ngxshare.js",
+  "esm2015": "esm2015/ngxshare.js",
+  "fesm5": "fesm5/ngxshare.js",
+  "fesm2015": "fesm2015/ngxshare.js",
+  "typings": "ngxshare.d.ts",
+  "metadata": "ngxshare.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

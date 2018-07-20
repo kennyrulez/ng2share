@@ -103,7 +103,7 @@
       "root": "projects/ngxshare",
       "sourceRoot": "projects/ngxshare/src",
       "projectType": "library",
-      "prefix": "Share",
+      "prefix": "share",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

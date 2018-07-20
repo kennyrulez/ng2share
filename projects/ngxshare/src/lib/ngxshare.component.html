@@ -1,0 +1,6 @@
+<div class="nxs-shareContainer nxs-{{direction}}">
+  <!-- Primary share platforms-->
+  <share-button *ngFor="let platform of platforms" [platformName]="platform" [textEnabled]="textEnabled" [addedText]="addedText" [direction]="direction"
+    [properties]="properties">
+  </share-button>
+</div>
