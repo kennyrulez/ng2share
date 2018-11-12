@@ -21,7 +21,7 @@ var NgxshareModule = /** @class */ (function () {
                     exports: [
                         NgxshareComponent
                     ]
-                },] },
+                },] }
     ];
     return NgxshareModule;
 }());

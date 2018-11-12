@@ -9,5 +9,5 @@ export declare class NgxshareComponent implements OnInit {
     ngOnInit(): void;
     fetchProperties(): void;
     getMetaContent(property: string): string;
-    direction: string;
+    direction: any;
 }
