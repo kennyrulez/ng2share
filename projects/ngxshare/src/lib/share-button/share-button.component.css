@@ -1,0 +1,91 @@
+a {
+    text-decoration: none;
+}
+
+.ic {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nxs-share-btn {
+    height: 32px;
+    width: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #eee;
+    border-radius: 5px;
+    /*center icons*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*disallow selection*/
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.nxs-horizontal-margin {
+    margin: 0 5px;
+}
+
+.nxs-vertical-margin {
+    margin: 5px 0;
+}
+
+.nxs-share-btn-with-text {
+    padding: 0.3em 1em;
+    width: auto;
+}
+
+.nxs-share-btn:hover {
+    color: #ffffff;
+}
+
+.nxs-shareText {
+    margin-left: 5px;
+    display: flex;
+    align-content: center;
+}
+
+.nxs-share-btn-facebook {
+    background: #2d609b;
+}
+
+.nxs-share-btn-twitter {
+    background: #00c3f3;
+}
+
+.nxs-share-btn-google-plus {
+    background: #eb4026;
+}
+
+.nxs-share-btn-linkedin {
+    background: #0074a1;
+}
+
+.nxs-share-btn-stumbleUpon {
+    background: #ff4e2e;
+}
+
+.nxs-share-btn-tumblr {
+    background: #35465c;
+}
+
+.nxs-share-btn-pinterest {
+    background: #ca212a;
+    font-size: 1.1rem;
+}
+
+.nxs-share-btn-reddit {
+    background: #ff5700;
+    font-size: 1.1rem;
+}
+
+.nxs-share-btn-mail {
+    background: #ff2e40;
+}

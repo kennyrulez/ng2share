@@ -142,6 +142,41 @@
           }
         }
       }
+    },
+    "ngxshare": {
+      "projectType": "library",
+      "root": "projects/ngxshare",
+      "sourceRoot": "projects/ngxshare/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngxshare/tsconfig.lib.json",
+            "project": "projects/ngxshare/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngxshare/src/test.ts",
+            "tsConfig": "projects/ngxshare/tsconfig.spec.json",
+            "karmaConfig": "projects/ngxshare/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngxshare/tsconfig.lib.json",
+              "projects/ngxshare/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ngxshare-app"
 }
