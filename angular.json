@@ -4,33 +4,33 @@
   "newProjectRoot": "projects",
   "projects": {
     "ngxshare-app": {
-      "root": "",
-      "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
       "schematics": {
         "@schematics/angular:class": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:component": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:directive": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:guard": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:module": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:pipe": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:service": {
-          "spec": false
+          "skipTests": true
         }
       },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -39,7 +39,8 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -65,7 +66,19 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -86,50 +99,49 @@
             "browserTarget": "ngxshare-app:build"
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json"
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "ngxshare": {
-      "root": "projects/ngxshare",
-      "sourceRoot": "projects/ngxshare/src",
-      "projectType": "library",
-      "prefix": "share",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ngxshare/tsconfig.lib.json",
-            "project": "projects/ngxshare/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "projects/ngxshare/ng-package.prod.json"
-            }
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngxshare/tsconfig.lib.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "ngxshare-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngxshare-app:serve:production"
+            }
+          }
         }
       }
-    }
-  },
+    }},
   "defaultProject": "ngxshare-app"
 }
